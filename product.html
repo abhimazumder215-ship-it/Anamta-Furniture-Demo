@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — Anamta Furniture Crafters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="header"></header>
+<div id="mobileContainer"></div>
+
+<!-- BREADCRUMB -->
+<div style="background:var(--cream);padding:80px 0 0;">
+  <div class="container">
+    <div class="breadcrumb" style="justify-content:flex-start;padding-top:20px;">
+      <a href="index.html" style="color:var(--gold);">Home</a>
+      <span style="color:var(--text-light);">›</span>
+      <a href="shop.html" style="color:var(--gold);">Shop</a>
+      <span style="color:var(--text-light);">›</span>
+      <span style="color:var(--text-mid);" id="productDetailCat">Product</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT DETAIL -->
+<div class="container">
+  <div class="product-detail">
+    <div class="product-detail-inner">
+
+      <!-- GALLERY -->
+      <div class="product-gallery">
+        <div class="main-img" id="mainImg">
+          <div id="mainImgContent" style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <div class="thumb-row">
+          <div class="thumb active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" width="28" height="28"><rect x="3" y="2" width="18" height="20" rx="1"/></svg>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" width="28" height="28"><path d="M3 9V5a2 2 0 012-2h14a2 2 0 012 2v4"/></svg>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" width="28" height="28"><rect x="2" y="7" width="20" height="3" rx="1"/></svg>
+          </div>
+          <div class="thumb">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" width="28" height="28"><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="product-detail-info">
+        <div class="product-detail-category" id="productDetailCatLabel">Category</div>
+        <h1 class="product-detail-title" id="productDetailName">Loading…</h1>
+
+        <div class="product-detail-rating">
+          <span class="stars">★★★★★</span>
+          <a class="review-count-link" href="reviews.html">See all reviews</a>
+        </div>
+
+        <div>
+          <span class="product-detail-price" id="productDetailPrice">₹0</span>
+        </div>
+        <div class="savings-badge" id="savingsBadge" style="display:none;">
+          You save ₹0 (0% off)
+        </div>
+
+        <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.75;margin:20px 0;" id="productDetailDesc">
+          Loading description…
+        </p>
+
+        <div class="product-divider"></div>
+
+        <div>
+          <div class="option-label">Wood Finish</div>
+          <div class="material-options" id="productMaterials">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <div>
+          <div class="option-label">Quantity</div>
+          <div class="qty-row">
+            <div class="qty-control">
+              <button class="qty-btn" id="qtyMinus">−</button>
+              <input class="qty-num" type="number" value="1" min="1" id="qtyInput">
+              <button class="qty-btn" id="qtyPlus">+</button>
+            </div>
+            <span style="font-size:0.78rem;color:var(--gold);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" style="display:inline;vertical-align:middle;"><path d="M5 13l4 4L19 7"/></svg>
+              In Stock
+            </span>
+          </div>
+        </div>
+
+        <div class="product-cta-row">
+          <button class="btn-add-cart" id="addToCartBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Add to Cart
+          </button>
+          <button class="btn-wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </button>
+        </div>
+
+        <div class="product-divider"></div>
+
+        <div class="product-meta">
+          <span><strong>Availability:</strong> In Stock — Ships within 7–14 days</span>
+          <span><strong>Material:</strong> Solid Sheesham Wood</span>
+          <span><strong>Warranty:</strong> 2 Years on craftsmanship</span>
+          <span><strong>Brand:</strong> Anamta Furniture Crafters</span>
+          <span><strong>Origin:</strong> Handcrafted in Jodhpur, Rajasthan</span>
+        </div>
+
+        <div class="product-divider"></div>
+
+        <div style="display:flex;gap:20px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--text-light);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Free Shipping over ₹50,000
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--text-light);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/></svg>
+            100% Sheesham Wood
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;font-size:0.78rem;color:var(--text-light);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            2-Year Warranty
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RELATED PRODUCTS -->
+    <div style="margin-top:80px;">
+      <div class="section-label" style="margin-bottom:8px;">You May Also Like</div>
+      <h2 class="section-title" style="margin-bottom:40px;">Related Products</h2>
+      <div class="products-grid" id="relatedProducts">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footerContainer"></div>
+
+<script src="nav-footer.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

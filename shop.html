@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — Anamta Furniture Crafters</title>
+  <meta name="description" content="Browse our full collection of handcrafted Sheesham furniture, sofas, beds, dining tables and antique pieces.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="header"></header>
+<div id="mobileContainer"></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span style="color:rgba(255,255,255,0.7);" id="searchTitle">All Products</span>
+    </div>
+    <h1>Our Furniture</h1>
+    <p>Handcrafted with love in Jodhpur, Rajasthan</p>
+  </div>
+</div>
+
+<!-- SHOP LAYOUT -->
+<div class="container">
+  <div class="shop-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="shop-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">Categories</div>
+        <div class="category-filters">
+          <div class="category-filter active" data-category="all">
+            All Products <span class="filter-count">12</span>
+          </div>
+          <div class="category-filter" data-category="beds">
+            Sheesham Beds <span class="filter-count">2</span>
+          </div>
+          <div class="category-filter" data-category="sofas">
+            Luxury Sofas <span class="filter-count">3</span>
+          </div>
+          <div class="category-filter" data-category="antique">
+            Antique Pieces <span class="filter-count">3</span>
+          </div>
+          <div class="category-filter" data-category="dining">
+            Dining Tables <span class="filter-count">2</span>
+          </div>
+          <div class="category-filter" data-category="custom">
+            Custom Furniture <span class="filter-count">2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Price Range</div>
+        <div class="price-range">
+          <input type="range" min="10000" max="110000" value="110000" step="1000">
+          <div class="price-labels">
+            <span>₹10,000</span>
+            <span>₹1,10,000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Wood Type</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <label style="display:flex;align-items:center;gap:10px;font-size:0.85rem;color:var(--text-mid);cursor:pointer;">
+            <input type="checkbox" checked style="accent-color:var(--gold);"> Sheesham Wood
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:0.85rem;color:var(--text-mid);cursor:pointer;">
+            <input type="checkbox" style="accent-color:var(--gold);"> Teak Wood
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:0.85rem;color:var(--text-mid);cursor:pointer;">
+            <input type="checkbox" style="accent-color:var(--gold);"> Rosewood
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:0.85rem;color:var(--text-mid);cursor:pointer;">
+            <input type="checkbox" style="accent-color:var(--gold);"> Mango Wood
+          </label>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-title">Rating</div>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+            <input type="radio" name="rating" checked style="accent-color:var(--gold);">
+            <span class="stars-sm">★★★★★</span>
+            <span style="font-size:0.75rem;color:var(--text-light);">&amp; above</span>
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+            <input type="radio" name="rating" style="accent-color:var(--gold);">
+            <span class="stars-sm">★★★★☆</span>
+            <span style="font-size:0.75rem;color:var(--text-light);">&amp; above</span>
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <div style="background:var(--brown-deep);padding:28px;text-align:center;">
+          <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-light);margin-bottom:8px;">Custom Order</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:#fff;margin-bottom:12px;">Need Something Unique?</div>
+          <p style="font-size:0.78rem;color:rgba(255,255,255,0.55);margin-bottom:20px;line-height:1.6;">We craft furniture exactly to your specifications.</p>
+          <a href="contact.html" class="btn btn-gold-outline" style="display:block;text-align:center;">Get Quote</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN SHOP -->
+    <main class="shop-main">
+      <div class="shop-toolbar">
+        <p class="results-count" id="resultsCount">Showing 12 of 12 products</p>
+        <select class="sort-select" id="sortSelect">
+          <option value="default">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name">Name: A to Z</option>
+        </select>
+      </div>
+
+      <div class="products-grid" id="shopGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </main>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div id="footerContainer"></div>
+
+<script src="nav-footer.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

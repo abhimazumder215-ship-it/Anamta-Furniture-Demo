@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart — Anamta Furniture Crafters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="header"></header>
+<div id="mobileContainer"></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span>
+      <span style="color:rgba(255,255,255,0.7);">Cart</span>
+    </div>
+    <h1>Your Cart</h1>
+    <p>Review your selected furniture before placing an order</p>
+  </div>
+</div>
+
+<!-- CART LAYOUT -->
+<div class="container">
+  <div class="cart-layout">
+
+    <!-- CART ITEMS -->
+    <div>
+      <h2 class="cart-section-title">Cart Items</h2>
+      <div id="cartItems">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div id="orderSummary">
+      <!-- Rendered by JS -->
+    </div>
+
+  </div>
+</div>
+
+<!-- RECENTLY VIEWED -->
+<section style="padding:60px 0 100px;background:var(--cream);">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;">
+      <div>
+        <div class="section-label">Keep Shopping</div>
+        <h2 class="section-title">You Might Also Like</h2>
+      </div>
+      <a href="shop.html" class="btn btn-gold-outline">View All</a>
+    </div>
+    <div class="products-grid" id="suggestedProducts">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<div id="footerContainer"></div>
+
+<script src="nav-footer.js"></script>
+<script src="script.js"></script>
+<script>
+  // Render suggested products after main script loads
+  document.addEventListener('DOMContentLoaded', () => {
+    // Render 4 random products as suggestions
+    const shuffled = [...PRODUCTS].sort(() => Math.random() - 0.5).slice(0, 4);
+    renderProducts('suggestedProducts', shuffled);
+  });
+</script>
+</body>
+</html>
