@@ -17,7 +17,8 @@ const PRODUCTS = [
     badgeLabel: "Best Seller",
     description: "Handcrafted from premium Sheesham wood, this king-size bed features intricate carvings and a sturdy structure. Perfect blend of traditional craftsmanship and modern comfort.",
     materials: ["Natural Sheesham", "Honey Oak", "Walnut Finish"],
-    icon: "bed"
+    icon: "bed",
+    image: "https://images.unsplash.com/photo-1505693314120-0d443867891c?w=600&q=80"
   },
   {
     id: 2,
@@ -32,7 +33,8 @@ const PRODUCTS = [
     badgeLabel: "Sale",
     description: "A masterpiece of traditional woodworking, this vintage carved sofa features hand-carved details on solid wood frame with premium upholstery.",
     materials: ["Premium Fabric", "Velvet", "Leather"],
-    icon: "sofa"
+    icon: "sofa",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80"
   },
   {
     id: 3,
@@ -47,7 +49,8 @@ const PRODUCTS = [
     badgeLabel: "New",
     description: "Contemporary 3-seater sofa with solid Sheesham wood legs and premium cushioning. Offers exceptional comfort for your living room.",
     materials: ["Premium Fabric", "Velvet", "Linen"],
-    icon: "sofa"
+    icon: "sofa",
+    image: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80"
   },
   {
     id: 4,
@@ -62,7 +65,8 @@ const PRODUCTS = [
     badgeLabel: null,
     description: "Replica of 19th-century royal chairs with hand-carved armrests and backrests. Crafted from aged Sheesham wood with traditional joinery.",
     materials: ["Natural Sheesham", "Teak", "Rosewood"],
-    icon: "chair"
+    icon: "chair",
+    image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=600&q=80"
   },
   {
     id: 5,
@@ -77,7 +81,8 @@ const PRODUCTS = [
     badgeLabel: "Best Seller",
     description: "6-seater dining table crafted from solid Sheesham wood with a natural grain finish. Features sturdy legs and a smooth, polished top surface.",
     materials: ["Natural Sheesham", "Dark Walnut", "Light Oak"],
-    icon: "table"
+    icon: "table",
+    image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=600&q=80"
   },
   {
     id: 6,
@@ -92,7 +97,8 @@ const PRODUCTS = [
     badgeLabel: "Sale",
     description: "Majestic 4-door wardrobe with hand-carved panels, mirror, and multiple storage compartments. Built to last generations with solid Sheesham wood.",
     materials: ["Natural Sheesham", "Walnut", "Mahogany"],
-    icon: "wardrobe"
+    icon: "wardrobe",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
   },
   {
     id: 7,
@@ -107,7 +113,8 @@ const PRODUCTS = [
     badgeLabel: null,
     description: "Elegant coffee table with under-shelf storage and hand-carved legs. The natural Sheesham grain adds warmth and character to any living space.",
     materials: ["Natural Sheesham", "Honey Oak", "Dark Walnut"],
-    icon: "table"
+    icon: "table",
+    image: "https://images.unsplash.com/photo-1532372320572-cda25653a26d?w=600&q=80"
   },
   {
     id: 8,
@@ -122,7 +129,8 @@ const PRODUCTS = [
     badgeLabel: "New",
     description: "Multi-purpose wooden cabinet with traditional brass fittings and hand-painted floral motifs. Perfect for displaying collectibles and storing essentials.",
     materials: ["Natural Sheesham", "Rosewood", "Teak"],
-    icon: "cabinet"
+    icon: "cabinet",
+    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=600&q=80"
   },
   {
     id: 9,
@@ -137,7 +145,8 @@ const PRODUCTS = [
     badgeLabel: "Best Seller",
     description: "Premium 2-seater recliner with solid Sheesham wood arms, built-in USB charging, and high-density foam cushions wrapped in genuine leather.",
     materials: ["Genuine Leather", "Premium Leatherette", "Velvet"],
-    icon: "sofa"
+    icon: "sofa",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80"
   },
   {
     id: 10,
@@ -152,7 +161,8 @@ const PRODUCTS = [
     badgeLabel: null,
     description: "Spacious study table with built-in bookshelf, drawer unit, and cable management. Handcrafted from solid Sheesham wood for lasting durability.",
     materials: ["Natural Sheesham", "Honey Oak", "Walnut"],
-    icon: "table"
+    icon: "table",
+    image: "https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?w=600&q=80"
   },
   {
     id: 11,
@@ -167,7 +177,8 @@ const PRODUCTS = [
     badgeLabel: "Sale",
     description: "Elegant glass-fronted display cabinet with hand-carved wooden frame and interior lighting. Ideal for showcasing prized possessions and antiques.",
     materials: ["Natural Sheesham", "Dark Teak", "Aged Oak"],
-    icon: "cabinet"
+    icon: "cabinet",
+    image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=600&q=80"
   },
   {
     id: 12,
@@ -182,7 +193,8 @@ const PRODUCTS = [
     badgeLabel: null,
     description: "Compact bedside table with drawer and open shelf, crafted from solid Sheesham wood. Pairs perfectly with any Anamta bed collection.",
     materials: ["Natural Sheesham", "Honey Oak", "Walnut"],
-    icon: "table"
+    icon: "table",
+    image: "https://images.unsplash.com/photo-1551298370-9d3d53740c72?w=600&q=80"
   }
 ];
 
@@ -369,15 +381,16 @@ function createProductCard(p) {
   const badgeHtml = p.badge ? `<span class="product-badge badge-${p.badge}">${p.badgeLabel}</span>` : '';
   const oldPriceHtml = p.oldPrice ? `<span class="product-price-old">${formatPrice(p.oldPrice)}</span>` : '';
   const starsHtml = '★'.repeat(Math.floor(p.rating)) + (p.rating % 1 ? '½' : '');
+  const imgHtml = p.image
+    ? `<img src="${p.image}" alt="${p.name}" class="product-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+       <div class="product-placeholder" style="display:none;">${getProductIcon(p.icon)}<span>${p.categoryLabel}</span></div>`
+    : `<div class="product-placeholder">${getProductIcon(p.icon)}<span>${p.categoryLabel}</span></div>`;
 
   return `
     <div class="product-card reveal" data-category="${p.category}" data-id="${p.id}">
       <div class="product-img-wrap">
         ${badgeHtml}
-        <div class="product-placeholder">
-          ${getProductIcon(p.icon)}
-          <span>${p.categoryLabel}</span>
-        </div>
+        ${imgHtml}
         <div class="product-actions">
           <button class="product-action-btn quick-view-btn" data-id="${p.id}" title="Quick View">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
@@ -461,8 +474,9 @@ function openQuickView(p) {
       <button class="modal-close" onclick="document.getElementById('quickViewModal').classList.remove('active')">✕</button>
       <div class="modal-inner">
         <div class="modal-img">
-          ${getProductIcon(p.icon)}
-          <span>${p.name}</span>
+          ${p.image
+            ? `<img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">`
+            : `${getProductIcon(p.icon)}<span>${p.name}</span>`}
         </div>
         <div class="modal-info">
           <div class="product-detail-category">${p.categoryLabel}</div>
@@ -508,11 +522,16 @@ function initReveal() {
 
 // ---- Collections ----
 const COLLECTIONS = [
-  { name: "Sheesham Beds", count: "8 Products", category: "beds", icon: "bed" },
-  { name: "Luxury Sofas", count: "10 Products", category: "sofas", icon: "sofa" },
-  { name: "Antique Pieces", count: "12 Products", category: "antique", icon: "cabinet" },
-  { name: "Dining Tables", count: "6 Products", category: "dining", icon: "table" },
-  { name: "Custom Furniture", count: "Custom Order", category: "custom", icon: "wardrobe" }
+  { name: "Sheesham Beds", count: "8 Products", category: "beds", icon: "bed",
+    image: "https://images.unsplash.com/photo-1505693314120-0d443867891c?w=500&q=80" },
+  { name: "Luxury Sofas", count: "10 Products", category: "sofas", icon: "sofa",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80" },
+  { name: "Antique Pieces", count: "12 Products", category: "antique", icon: "cabinet",
+    image: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=500&q=80" },
+  { name: "Dining Tables", count: "6 Products", category: "dining", icon: "table",
+    image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=500&q=80" },
+  { name: "Custom Furniture", count: "Custom Order", category: "custom", icon: "wardrobe",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" }
 ];
 
 function renderCollections() {
@@ -520,7 +539,10 @@ function renderCollections() {
   if (!grid) return;
   grid.innerHTML = COLLECTIONS.map(c => `
     <a href="shop.html?category=${c.category}" class="collection-card reveal">
-      <div class="collection-placeholder">
+      ${c.image
+        ? `<img src="${c.image}" alt="${c.name}" class="collection-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+        : ''}
+      <div class="collection-placeholder" ${c.image ? 'style="display:none;"' : ''}>
         ${getProductIcon(c.icon)}
       </div>
       <div class="collection-info">
@@ -589,7 +611,9 @@ function renderCartPage() {
             <td>
               <div class="cart-product">
                 <div class="cart-img">
-                  ${getProductIcon(item.icon || 'table')}
+                  ${item.image
+                    ? `<img src="${item.image}" alt="${item.name}" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">`
+                    : getProductIcon(item.icon || 'table')}
                 </div>
                 <div>
                   <div class="cart-name"><a href="product.html?id=${item.id}">${item.name}</a></div>
@@ -678,7 +702,13 @@ function renderProductDetail() {
   // Main icon
   const mainImgContent = document.getElementById('mainImgContent');
   if (mainImgContent) {
-    mainImgContent.innerHTML = getProductIcon(p.icon) + `<span>${p.name}</span>`;
+    if (p.image) {
+      mainImgContent.innerHTML = `<img src="${p.image}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;" onerror="this.style.display='none'">`;
+      const mainImg = document.getElementById('mainImg');
+      if (mainImg) mainImg.style.position = 'relative';
+    } else {
+      mainImgContent.innerHTML = getProductIcon(p.icon) + `<span>${p.name}</span>`;
+    }
   }
 
   // Add to cart button
